@@ -4,6 +4,9 @@
  */
 package view;
 
+import java.awt.Toolkit;
+import java.io.IOException;
+
 /**
  *
  * @author vomkh
@@ -12,9 +15,12 @@ public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
+     * @throws java.io.IOException
      */
-    public Login() {
+    public Login() throws IOException {
         initComponents();
+        this.setTitle("Portal Application For Motor Servicing At Home");
+//        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource(".\\src\\img\\icon.png")));
     }
 
     /**
