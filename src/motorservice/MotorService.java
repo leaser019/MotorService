@@ -4,6 +4,8 @@
  */
 package motorservice;
 
+import view.Login;
+
 /**
  *
  * @author vomkh
@@ -15,6 +17,7 @@ public class MotorService {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new Login().setVisible(true);
     }
     
 }
