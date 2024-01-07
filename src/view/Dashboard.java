@@ -44,6 +44,7 @@ public class Dashboard extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Portal Application For Motor Servicing At Home Portal Application For Motor Servicing At Home ");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setLocationByPlatform(true);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,6 +71,7 @@ public class Dashboard extends javax.swing.JFrame {
         informationPannel1.add(loginLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 404, 67));
 
         loginButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        loginButton1.setForeground(new java.awt.Color(51, 153, 255));
         loginButton1.setText("VIEW SERVICE");
         loginButton1.setToolTipText("");
         loginButton1.setBorder(null);
@@ -81,6 +83,7 @@ public class Dashboard extends javax.swing.JFrame {
         informationPannel1.add(loginButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 350, 40));
 
         loginButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        loginButton2.setForeground(new java.awt.Color(51, 153, 255));
         loginButton2.setText("QUERRY FORM");
         loginButton2.setToolTipText("");
         loginButton2.setBorder(null);
@@ -92,6 +95,7 @@ public class Dashboard extends javax.swing.JFrame {
         informationPannel1.add(loginButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 350, 40));
 
         loginButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        loginButton3.setForeground(new java.awt.Color(51, 153, 255));
         loginButton3.setText("VIEW USER");
         loginButton3.setToolTipText("");
         loginButton3.setBorder(null);
@@ -103,6 +107,7 @@ public class Dashboard extends javax.swing.JFrame {
         informationPannel1.add(loginButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 350, 40));
 
         loginButton4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        loginButton4.setForeground(new java.awt.Color(51, 153, 255));
         loginButton4.setText("VIEW VEHICLE");
         loginButton4.setToolTipText("");
         loginButton4.setBorder(null);
@@ -114,6 +119,7 @@ public class Dashboard extends javax.swing.JFrame {
         informationPannel1.add(loginButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 350, 40));
 
         loginButton5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        loginButton5.setForeground(new java.awt.Color(51, 153, 255));
         loginButton5.setText("LOG OUT");
         loginButton5.setToolTipText("");
         loginButton5.setBorder(null);
@@ -130,6 +136,7 @@ public class Dashboard extends javax.swing.JFrame {
         informationPannel1.add(loginButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 350, 40));
 
         loginButton6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        loginButton6.setForeground(new java.awt.Color(51, 153, 255));
         loginButton6.setText("VIEW CART");
         loginButton6.setToolTipText("");
         loginButton6.setBorder(null);
@@ -147,7 +154,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         getAccessibleContext().setAccessibleDescription("");
 
-        setBounds(0, 0, 790, 460);
+        setSize(new java.awt.Dimension(790, 460));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void closeButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButton1MouseClicked

@@ -10,11 +10,11 @@ import java.io.IOException;
  *
  * @author vomkh
  */
-
 public class Login extends javax.swing.JFrame {
 
     /**
      * Creates new form Login
+     *
      * @throws java.io.IOException
      */
     public Login() throws IOException {
@@ -126,6 +126,7 @@ public class Login extends javax.swing.JFrame {
         informationPannel.add(forgotMeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
         loginButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        loginButton.setForeground(new java.awt.Color(51, 153, 255));
         loginButton.setText("LOGIN");
         loginButton.setToolTipText("");
         loginButton.setBorder(null);
@@ -200,43 +201,46 @@ public class Login extends javax.swing.JFrame {
     private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
         String username = userNameFill.getText();
         String password = passwordFill.getText();
-        String pass = "admin";
-        if (username.equals(pass) && password.equals(pass)) {
+        String admin = "admin";
+        String user = "user";
+        if (username.equals(admin) && password.equals(admin)) {
+            this.dispose();
+            new QuerryForm().setVisible(true);
+        } else if (username.equals(user) && password.equals(user)) {
             this.dispose();
             new Dashboard().setVisible(true);
-     }else{
-         loginFailLabel.setText("Wrong Password Or Username");// TODO add your handling code here:
-    }
-
+        } else {
+            loginFailLabel.setText("Wrong Password Or Username");// TODO add your handling code here:
+        }
     }//GEN-LAST:event_loginButtonMouseClicked
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-    /* Set the Nimbus look and feel */
-    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-     */
-    try {
-        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-            if ("Nimbus".equals(info.getName())) {
-                javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                break;
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
             }
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-        java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        //</editor-fold>
+
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> {
+        });
     }
-    //</editor-fold>
-
-    //</editor-fold>
-
-    /* Create and display the form */
-    java.awt.EventQueue.invokeLater(() -> {
-    });
-}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Graphic;
