@@ -10,6 +10,7 @@ import java.io.IOException;
  *
  * @author vomkh
  */
+
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -47,8 +48,10 @@ public class Login extends javax.swing.JFrame {
         userNameFill = new javax.swing.JTextField();
         signUpLabel = new javax.swing.JLabel();
         dontHaveAccLabel = new javax.swing.JLabel();
+        loginFailLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Portal Application For Motor Servicing At Home ");
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -126,6 +129,11 @@ public class Login extends javax.swing.JFrame {
         loginButton.setText("LOGIN");
         loginButton.setToolTipText("");
         loginButton.setBorder(null);
+        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginButtonMouseClicked(evt);
+            }
+        });
         loginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButtonActionPerformed(evt);
@@ -161,6 +169,11 @@ public class Login extends javax.swing.JFrame {
         dontHaveAccLabel.setText("Don't have a account ?");
         informationPannel.add(dontHaveAccLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 150, -1));
 
+        loginFailLabel.setForeground(new java.awt.Color(255, 255, 255));
+        loginFailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        loginFailLabel.setText(" ");
+        informationPannel.add(loginFailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 400, -1));
+
         getContentPane().add(informationPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, -10, 410, 480));
 
         setSize(new java.awt.Dimension(780, 445));
@@ -177,40 +190,53 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_rememberMeBoxActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void passwordFillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFillActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFillActionPerformed
 
+    private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
+        String username = userNameFill.getText();
+        String password = passwordFill.getText();
+        String pass = "admin";
+        if (username.equals(pass) && password.equals(pass)) {
+            this.dispose();
+            new Dashboard().setVisible(true);
+     }else{
+         loginFailLabel.setText("Wrong Password Or Username");// TODO add your handling code here:
+    }
+
+    }//GEN-LAST:event_loginButtonMouseClicked
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+    /* Set the Nimbus look and feel */
+    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+     */
+    try {
+        for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            if ("Nimbus".equals(info.getName())) {
+                javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                break;
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-        });
+    } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+        java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
     }
+    //</editor-fold>
+
+    //</editor-fold>
+
+    /* Create and display the form */
+    java.awt.EventQueue.invokeLater(() -> {
+    });
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Graphic;
@@ -221,6 +247,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JButton loginButton;
+    private javax.swing.JLabel loginFailLabel;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel panelGraphic;
     private javax.swing.JTextField passwordFill;
