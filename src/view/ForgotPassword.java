@@ -10,16 +10,13 @@ import java.io.IOException;
  *
  * @author vomkh
  */
-public class Login extends javax.swing.JFrame {
+public class ForgotPassword extends javax.swing.JFrame {
 
     /**
-     * Creates new form Login
-     *
-     * @throws java.io.IOException
+     * Creates new form ForgotPassword
      */
-    public Login() throws IOException {
+    public ForgotPassword() {
         initComponents();
-        this.setTitle("Portal Application For Motor Servicing At Home");
     }
 
     /**
@@ -34,24 +31,22 @@ public class Login extends javax.swing.JFrame {
         panelGraphic = new javax.swing.JPanel();
         Graphic = new javax.swing.JLabel();
         informationPannel = new javax.swing.JPanel();
+        goBackButton = new javax.swing.JLabel();
         closeButton = new javax.swing.JLabel();
         loginLabel = new javax.swing.JLabel();
-        titleLabel = new javax.swing.JLabel();
         userNameLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         passwordLabel = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        rememberMeBox = new javax.swing.JCheckBox();
-        forgotMeLabel = new javax.swing.JLabel();
         loginButton = new javax.swing.JButton();
-        passwordFill = new javax.swing.JTextField();
+        confirmPasswordFill = new javax.swing.JTextField();
         userNameFill = new javax.swing.JTextField();
-        signUpLabel = new javax.swing.JLabel();
-        dontHaveAccLabel = new javax.swing.JLabel();
         loginFailLabel = new javax.swing.JLabel();
+        passwordLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        passwordFill1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Portal Application For Motor Servicing At Home ");
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -67,6 +62,17 @@ public class Login extends javax.swing.JFrame {
         informationPannel.setForeground(new java.awt.Color(51, 102, 255));
         informationPannel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        goBackButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        goBackButton.setForeground(new java.awt.Color(255, 255, 255));
+        goBackButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        goBackButton.setText("Go Back");
+        goBackButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                goBackButtonMouseClicked(evt);
+            }
+        });
+        informationPannel.add(goBackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, 40));
+
         closeButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         closeButton.setForeground(new java.awt.Color(255, 255, 255));
         closeButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -76,19 +82,13 @@ public class Login extends javax.swing.JFrame {
                 closeButtonMouseClicked(evt);
             }
         });
-        informationPannel.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 53, 31));
+        informationPannel.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 30, 30));
 
         loginLabel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         loginLabel.setForeground(new java.awt.Color(255, 255, 255));
         loginLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        loginLabel.setText("LOGIN");
-        informationPannel.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 44, 404, 67));
-
-        titleLabel.setFont(new java.awt.Font("Segoe UI", 0, 17)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(255, 255, 255));
-        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleLabel.setText("Portal Application For Motor Servicing At Home ");
-        informationPannel.add(titleLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 400, 30));
+        loginLabel.setText("Forgot Password");
+        informationPannel.add(loginLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 404, 67));
 
         userNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         userNameLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,38 +101,16 @@ public class Login extends javax.swing.JFrame {
 
         passwordLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         passwordLabel.setForeground(new java.awt.Color(255, 255, 255));
-        passwordLabel.setText("Password");
-        informationPannel.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 130, 20));
+        passwordLabel.setText("Phone Number");
+        informationPannel.add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 130, 20));
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("_____________________________________________________________________");
-        informationPannel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 360, 30));
-
-        rememberMeBox.setBackground(new java.awt.Color(51, 153, 255));
-        rememberMeBox.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        rememberMeBox.setForeground(new java.awt.Color(255, 255, 255));
-        rememberMeBox.setText("Remember Me");
-        rememberMeBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rememberMeBoxActionPerformed(evt);
-            }
-        });
-        informationPannel.add(rememberMeBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 140, -1));
-
-        forgotMeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        forgotMeLabel.setForeground(new java.awt.Color(255, 255, 255));
-        forgotMeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        forgotMeLabel.setText("Forgot Password? ");
-        forgotMeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                forgotMeLabelMouseClicked(evt);
-            }
-        });
-        informationPannel.add(forgotMeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
+        informationPannel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 370, 30));
 
         loginButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         loginButton.setForeground(new java.awt.Color(51, 153, 255));
-        loginButton.setText("LOGIN");
+        loginButton.setText("Set New Password");
         loginButton.setToolTipText("");
         loginButton.setBorder(null);
         loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -145,19 +123,19 @@ public class Login extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
-        informationPannel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 350, 40));
+        informationPannel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 350, 40));
 
-        passwordFill.setBackground(new java.awt.Color(51, 153, 255));
-        passwordFill.setForeground(new java.awt.Color(255, 255, 255));
-        passwordFill.setBorder(null);
-        passwordFill.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        passwordFill.setSelectionColor(new java.awt.Color(255, 255, 255));
-        passwordFill.addActionListener(new java.awt.event.ActionListener() {
+        confirmPasswordFill.setBackground(new java.awt.Color(51, 153, 255));
+        confirmPasswordFill.setForeground(new java.awt.Color(255, 255, 255));
+        confirmPasswordFill.setBorder(null);
+        confirmPasswordFill.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        confirmPasswordFill.setSelectionColor(new java.awt.Color(255, 255, 255));
+        confirmPasswordFill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordFillActionPerformed(evt);
+                confirmPasswordFillActionPerformed(evt);
             }
         });
-        informationPannel.add(passwordFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 330, 30));
+        informationPannel.add(confirmPasswordFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 330, 30));
 
         userNameFill.setBackground(new java.awt.Color(51, 153, 255));
         userNameFill.setForeground(new java.awt.Color(255, 255, 255));
@@ -165,52 +143,55 @@ public class Login extends javax.swing.JFrame {
         userNameFill.setDisabledTextColor(new java.awt.Color(255, 255, 255));
         informationPannel.add(userNameFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 330, 20));
 
-        signUpLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        signUpLabel.setForeground(new java.awt.Color(255, 255, 255));
-        signUpLabel.setText("Sign Up");
-        signUpLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                signUpLabelMouseClicked(evt);
-            }
-        });
-        informationPannel.add(signUpLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 50, -1));
-
-        dontHaveAccLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        dontHaveAccLabel.setForeground(new java.awt.Color(204, 204, 204));
-        dontHaveAccLabel.setText("Don't have a account ?");
-        informationPannel.add(dontHaveAccLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, 150, -1));
-
         loginFailLabel.setForeground(new java.awt.Color(255, 255, 255));
         loginFailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         loginFailLabel.setText(" ");
         informationPannel.add(loginFailLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 400, -1));
 
-        getContentPane().add(informationPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, -10, 440, 480));
+        passwordLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        passwordLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        passwordLabel1.setText("New Password");
+        informationPannel.add(passwordLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 130, 20));
 
-        setSize(new java.awt.Dimension(809, 445));
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("_____________________________________________________________________");
+        informationPannel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 370, 30));
+
+        passwordFill1.setBackground(new java.awt.Color(51, 153, 255));
+        passwordFill1.setForeground(new java.awt.Color(255, 255, 255));
+        passwordFill1.setBorder(null);
+        passwordFill1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        passwordFill1.setSelectionColor(new java.awt.Color(255, 255, 255));
+        passwordFill1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordFill1ActionPerformed(evt);
+            }
+        });
+        informationPannel.add(passwordFill1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 330, 30));
+
+        getContentPane().add(informationPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, -10, 410, 480));
+
+        setSize(new java.awt.Dimension(781, 453));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void goBackButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_goBackButtonMouseClicked
+        try {
+            this.dispose();
+            new Login().setVisible(true);
+        } catch (IOException ex) {
+           
+        }
+    }//GEN-LAST:event_goBackButtonMouseClicked
 
     private void closeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeButtonMouseClicked
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_closeButtonMouseClicked
 
-    private void rememberMeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rememberMeBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rememberMeBoxActionPerformed
-
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-
-    }//GEN-LAST:event_loginButtonActionPerformed
-
-    private void passwordFillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFillActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordFillActionPerformed
-
     private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
         String username = userNameFill.getText();
-        String password = passwordFill.getText();
+        String password = confirmPasswordFill.getText();
         String admin = "admin";
         String user = "user";
         if (username.equals(admin) && password.equals(admin)) {
@@ -224,16 +205,17 @@ public class Login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_loginButtonMouseClicked
 
-    private void signUpLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpLabelMouseClicked
-        // TODO add your handling code here:
-        this.dispose();
-        new SignUp().setVisible(true);
-    }//GEN-LAST:event_signUpLabelMouseClicked
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
 
-    private void forgotMeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_forgotMeLabelMouseClicked
-        this.dispose();
-        new ForgotPassword().setVisible(true);
-    }//GEN-LAST:event_forgotMeLabelMouseClicked
+    }//GEN-LAST:event_loginButtonActionPerformed
+
+    private void confirmPasswordFillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmPasswordFillActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_confirmPasswordFillActionPerformed
+
+    private void passwordFill1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFill1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordFill1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,35 +233,41 @@ public class Login extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(ForgotPassword.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(ForgotPassword.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(ForgotPassword.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(ForgotPassword.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
-        //</editor-fold>
-
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ForgotPassword().setVisible(true);
+            }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Graphic;
     private javax.swing.JLabel closeButton;
-    private javax.swing.JLabel dontHaveAccLabel;
-    private javax.swing.JLabel forgotMeLabel;
+    private javax.swing.JTextField confirmPasswordFill;
+    private javax.swing.JLabel goBackButton;
     private javax.swing.JPanel informationPannel;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JButton loginButton;
     private javax.swing.JLabel loginFailLabel;
     private javax.swing.JLabel loginLabel;
     private javax.swing.JPanel panelGraphic;
-    private javax.swing.JTextField passwordFill;
+    private javax.swing.JTextField passwordFill1;
     private javax.swing.JLabel passwordLabel;
-    private javax.swing.JCheckBox rememberMeBox;
-    private javax.swing.JLabel signUpLabel;
-    private javax.swing.JLabel titleLabel;
+    private javax.swing.JLabel passwordLabel1;
     private javax.swing.JTextField userNameFill;
     private javax.swing.JLabel userNameLabel;
     // End of variables declaration//GEN-END:variables

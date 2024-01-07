@@ -35,8 +35,6 @@ public class Dashboard extends javax.swing.JFrame {
         loginLabel1 = new javax.swing.JLabel();
         loginButton1 = new javax.swing.JButton();
         loginButton2 = new javax.swing.JButton();
-        loginButton3 = new javax.swing.JButton();
-        loginButton4 = new javax.swing.JButton();
         loginButton5 = new javax.swing.JButton();
         loginButton6 = new javax.swing.JButton();
         Graphic = new javax.swing.JLabel();
@@ -72,51 +70,37 @@ public class Dashboard extends javax.swing.JFrame {
 
         loginButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         loginButton1.setForeground(new java.awt.Color(51, 153, 255));
-        loginButton1.setText("VIEW SERVICE");
+        loginButton1.setText("CHANGE INFOMATION");
         loginButton1.setToolTipText("");
         loginButton1.setBorder(null);
+        loginButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginButton1MouseClicked(evt);
+            }
+        });
         loginButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButton1ActionPerformed(evt);
             }
         });
-        informationPannel1.add(loginButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 350, 40));
+        informationPannel1.add(loginButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 350, 40));
 
         loginButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         loginButton2.setForeground(new java.awt.Color(51, 153, 255));
-        loginButton2.setText("QUERRY FORM");
+        loginButton2.setText("ORDER");
         loginButton2.setToolTipText("");
         loginButton2.setBorder(null);
+        loginButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginButton2MouseClicked(evt);
+            }
+        });
         loginButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButton2ActionPerformed(evt);
             }
         });
-        informationPannel1.add(loginButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 350, 40));
-
-        loginButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        loginButton3.setForeground(new java.awt.Color(51, 153, 255));
-        loginButton3.setText("VIEW USER");
-        loginButton3.setToolTipText("");
-        loginButton3.setBorder(null);
-        loginButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButton3ActionPerformed(evt);
-            }
-        });
-        informationPannel1.add(loginButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 350, 40));
-
-        loginButton4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        loginButton4.setForeground(new java.awt.Color(51, 153, 255));
-        loginButton4.setText("VIEW VEHICLE");
-        loginButton4.setToolTipText("");
-        loginButton4.setBorder(null);
-        loginButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButton4ActionPerformed(evt);
-            }
-        });
-        informationPannel1.add(loginButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 350, 40));
+        informationPannel1.add(loginButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 350, 40));
 
         loginButton5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         loginButton5.setForeground(new java.awt.Color(51, 153, 255));
@@ -137,15 +121,20 @@ public class Dashboard extends javax.swing.JFrame {
 
         loginButton6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         loginButton6.setForeground(new java.awt.Color(51, 153, 255));
-        loginButton6.setText("VIEW CART");
+        loginButton6.setText("ORDER HISTORY");
         loginButton6.setToolTipText("");
         loginButton6.setBorder(null);
+        loginButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginButton6MouseClicked(evt);
+            }
+        });
         loginButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 loginButton6ActionPerformed(evt);
             }
         });
-        informationPannel1.add(loginButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 350, 40));
+        informationPannel1.add(loginButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 350, 40));
 
         getContentPane().add(informationPannel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, -10, 410, 480));
 
@@ -171,14 +160,6 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_loginButton2ActionPerformed
 
-    private void loginButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginButton3ActionPerformed
-
-    private void loginButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loginButton4ActionPerformed
-
     private void loginButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton5ActionPerformed
        
     }//GEN-LAST:event_loginButton5ActionPerformed
@@ -195,6 +176,21 @@ public class Dashboard extends javax.swing.JFrame {
             Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_loginButton5MouseClicked
+
+    private void loginButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButton2MouseClicked
+    this.dispose();
+    new Order().setVisible(true);
+    }//GEN-LAST:event_loginButton2MouseClicked
+
+    private void loginButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButton1MouseClicked
+     this.dispose();
+     new ChangeInformation().setVisible(true);
+    }//GEN-LAST:event_loginButton1MouseClicked
+
+    private void loginButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButton6MouseClicked
+        this.dispose();
+        new OrderHistory().setVisible(true);
+    }//GEN-LAST:event_loginButton6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -237,8 +233,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel informationPannel1;
     private javax.swing.JButton loginButton1;
     private javax.swing.JButton loginButton2;
-    private javax.swing.JButton loginButton3;
-    private javax.swing.JButton loginButton4;
     private javax.swing.JButton loginButton5;
     private javax.swing.JButton loginButton6;
     private javax.swing.JLabel loginLabel1;

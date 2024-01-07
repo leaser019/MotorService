@@ -56,6 +56,7 @@ public class JDBC {
             }else{
                 System.out.println(" Added Fail " );
             }
+            JDBC.closeConnection(c);
         } catch (SQLException ex) {
             Logger.getLogger(JDBC.class.getName()).log(Level.SEVERE, null, ex);
         }
