@@ -53,6 +53,7 @@ public class SignUp extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         passwordFill2 = new javax.swing.JTextField();
         confirmPasswordFill1 = new javax.swing.JTextField();
+        userNameFill1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -82,7 +83,7 @@ public class SignUp extends javax.swing.JFrame {
                 closeButtonMouseClicked(evt);
             }
         });
-        informationPannel.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 40, 30));
+        informationPannel.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, 40, 30));
 
         loginLabel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         loginLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,7 +124,7 @@ public class SignUp extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
-        informationPannel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 810, 40));
+        informationPannel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 400, 40));
 
         confirmPasswordFill.setBackground(new java.awt.Color(51, 153, 255));
         confirmPasswordFill.setForeground(new java.awt.Color(255, 255, 255));
@@ -141,7 +142,7 @@ public class SignUp extends javax.swing.JFrame {
         userNameFill.setForeground(new java.awt.Color(255, 255, 255));
         userNameFill.setBorder(null);
         userNameFill.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        informationPannel.add(userNameFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 330, 20));
+        informationPannel.add(userNameFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 330, 20));
 
         loginFailLabel.setForeground(new java.awt.Color(255, 255, 255));
         loginFailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -220,9 +221,15 @@ public class SignUp extends javax.swing.JFrame {
         });
         informationPannel.add(confirmPasswordFill1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 330, 30));
 
-        getContentPane().add(informationPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 810, 630));
+        userNameFill1.setBackground(new java.awt.Color(51, 153, 255));
+        userNameFill1.setForeground(new java.awt.Color(255, 255, 255));
+        userNameFill1.setBorder(null);
+        userNameFill1.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        informationPannel.add(userNameFill1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 170, 330, 20));
 
-        setSize(new java.awt.Dimension(809, 465));
+        getContentPane().add(informationPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 840, 630));
+
+        setSize(new java.awt.Dimension(837, 465));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -333,6 +340,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel passwordLabel2;
     private javax.swing.JLabel passwordLabel3;
     private javax.swing.JTextField userNameFill;
+    private javax.swing.JTextField userNameFill1;
     private javax.swing.JLabel userNameLabel;
     private javax.swing.JLabel userNameLabel1;
     // End of variables declaration//GEN-END:variables
