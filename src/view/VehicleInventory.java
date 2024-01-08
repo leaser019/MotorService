@@ -86,7 +86,7 @@ public class VehicleInventory extends javax.swing.JFrame {
                 closeButtonMouseClicked(evt);
             }
         });
-        informationPannel.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, 40, 30));
+        informationPannel.add(closeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 40, 30));
 
         loginLabel.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         loginLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -122,7 +122,7 @@ public class VehicleInventory extends javax.swing.JFrame {
                 loginButtonActionPerformed(evt);
             }
         });
-        informationPannel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 700, 400, 40));
+        informationPannel.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 700, 400, 40));
 
         confirmPasswordFill.setBackground(new java.awt.Color(51, 153, 255));
         confirmPasswordFill.setForeground(new java.awt.Color(255, 255, 255));
@@ -200,7 +200,9 @@ public class VehicleInventory extends javax.swing.JFrame {
         });
         informationPannel.add(confirmPasswordFill1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 640, 330, 30));
 
-        jTable1.setForeground(new java.awt.Color(51, 102, 255));
+        jTable1.setBackground(new java.awt.Color(51, 102, 255));
+        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jTable1.setForeground(new java.awt.Color(255, 255, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -212,6 +214,7 @@ public class VehicleInventory extends javax.swing.JFrame {
                 "Vehicle_ID", "Model", "Color", "Year"
             }
         ));
+        jTable1.setSelectionBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(jTable1);
 
         informationPannel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 820, 210));
