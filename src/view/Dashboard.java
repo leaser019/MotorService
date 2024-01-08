@@ -121,7 +121,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         loginButton6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         loginButton6.setForeground(new java.awt.Color(51, 153, 255));
-        loginButton6.setText("ORDER HISTORY");
+        loginButton6.setText("VEHICLE INVENTORY");
         loginButton6.setToolTipText("");
         loginButton6.setBorder(null);
         loginButton6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,7 +161,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_loginButton2ActionPerformed
 
     private void loginButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton5ActionPerformed
-       
+
     }//GEN-LAST:event_loginButton5ActionPerformed
 
     private void loginButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton6ActionPerformed
@@ -169,7 +169,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_loginButton6ActionPerformed
 
     private void loginButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButton5MouseClicked
-     this.dispose();
+        this.dispose();
         try {
             new Login().setVisible(true);
         } catch (IOException ex) {
@@ -178,18 +178,18 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_loginButton5MouseClicked
 
     private void loginButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButton2MouseClicked
-    this.dispose();
-    new Order().setVisible(true);
+        this.dispose();
+        new Order().setVisible(true);
     }//GEN-LAST:event_loginButton2MouseClicked
 
     private void loginButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButton1MouseClicked
-     this.dispose();
-     new ChangeInformation().setVisible(true);
+        this.dispose();
+        new ChangeInformation().setVisible(true);
     }//GEN-LAST:event_loginButton1MouseClicked
 
     private void loginButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButton6MouseClicked
         this.dispose();
-        new OrderHistory().setVisible(true);
+        new VehicleInventory().setVisible(true);
     }//GEN-LAST:event_loginButton6MouseClicked
 
     /**
