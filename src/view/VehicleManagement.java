@@ -84,6 +84,7 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
         btnshowall = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jLabel1.setText("Plate number:");
 

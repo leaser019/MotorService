@@ -248,9 +248,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblstatus">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel4"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btncancel">
       <Properties>

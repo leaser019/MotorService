@@ -125,8 +125,6 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
 
         btnshowall.setText("Show all");
 
-        lblstatus.setText("jLabel4");
-
         btncancel.setText("Cancel");
         btncancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

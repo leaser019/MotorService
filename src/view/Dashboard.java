@@ -60,7 +60,7 @@ public class Dashboard extends javax.swing.JFrame {
                 closeButton1MouseClicked(evt);
             }
         });
-        informationPannel1.add(closeButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 6, 53, 31));
+        informationPannel1.add(closeButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 53, 31));
 
         loginLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         loginLabel1.setForeground(new java.awt.Color(255, 255, 255));
