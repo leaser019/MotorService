@@ -161,7 +161,7 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
                 btnshowallActionPerformed(evt);
             }
         });
-        jPanel1.add(btnshowall, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 560, 90, -1));
+        jPanel1.add(btnshowall, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 560, 110, -1));
 
         btndelete.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         btndelete.setForeground(new java.awt.Color(51, 153, 255));
@@ -171,7 +171,7 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(733, 250, 100, -1));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, 100, -1));
 
         btnaddnew.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         btnaddnew.setForeground(new java.awt.Color(51, 153, 255));
@@ -181,7 +181,7 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
                 btnaddnewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnaddnew, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 100, -1));
+        jPanel1.add(btnaddnew, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, 100, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

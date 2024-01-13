@@ -83,6 +83,7 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tbresult.setModel(new javax.swing.table.DefaultTableModel(
@@ -137,7 +138,7 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
         btnshowall.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnshowall.setForeground(new java.awt.Color(51, 153, 255));
         btnshowall.setText("Show All");
-        jPanel1.add(btnshowall, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 570, 84, -1));
+        jPanel1.add(btnshowall, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 570, 90, -1));
 
         btnaddorder.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnaddorder.setForeground(new java.awt.Color(51, 153, 255));
@@ -268,7 +269,8 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 610));
 
-        pack();
+        setSize(new java.awt.Dimension(777, 610));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
