@@ -88,6 +88,9 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        StaffID_Textfield = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -185,8 +188,8 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Plate Number");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+        jLabel1.setText("Staff ID");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
         txtplatenumber.setBackground(new java.awt.Color(51, 153, 255));
         txtplatenumber.setForeground(new java.awt.Color(255, 255, 255));
@@ -264,6 +267,25 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
         jLabel11.setText("______________________________________________________________");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 300, -1));
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Plate Number");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("_____________________________________________________________");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 300, 30));
+
+        StaffID_Textfield.setBackground(new java.awt.Color(51, 153, 255));
+        StaffID_Textfield.setForeground(new java.awt.Color(255, 255, 255));
+        StaffID_Textfield.setBorder(null);
+        StaffID_Textfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StaffID_TextfieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(StaffID_Textfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 310, 20));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 610));
 
         setSize(new java.awt.Dimension(865, 606));
@@ -337,6 +359,10 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
     private void txtplatenumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtplatenumberActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtplatenumberActionPerformed
+
+    private void StaffID_TextfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StaffID_TextfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_StaffID_TextfieldActionPerformed
     
             
     /**
@@ -375,6 +401,7 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField StaffID_Textfield;
     private javax.swing.JButton btnaddnew;
     private javax.swing.JButton btncancel;
     private javax.swing.JButton btndelete;
@@ -385,6 +412,8 @@ public class VehicleManagement extends javax.swing.JFrame implements ActionListe
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
