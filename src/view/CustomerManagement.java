@@ -252,9 +252,9 @@ public class CustomerManagement extends javax.swing.JFrame implements ActionList
         jLabel1.setText("CUSTOMER INFORMATION");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 10, 790, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 630));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 650));
 
-        setSize(new java.awt.Dimension(784, 628));
+        setSize(new java.awt.Dimension(784, 640));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

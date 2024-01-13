@@ -138,7 +138,7 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
         btnshowall.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnshowall.setForeground(new java.awt.Color(51, 153, 255));
         btnshowall.setText("Show All");
-        jPanel1.add(btnshowall, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 570, 90, -1));
+        jPanel1.add(btnshowall, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 570, 84, -1));
 
         btnaddorder.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnaddorder.setForeground(new java.awt.Color(51, 153, 255));
@@ -163,62 +163,67 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Customer ID");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
         txtcustomerid.setBackground(new java.awt.Color(51, 153, 255));
         txtcustomerid.setForeground(new java.awt.Color(255, 255, 255));
         txtcustomerid.setBorder(null);
-        jPanel1.add(txtcustomerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 272, -1));
+        jPanel1.add(txtcustomerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 272, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Staff ID");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, -1, -1));
 
         txtstaffid.setBackground(new java.awt.Color(51, 153, 255));
         txtstaffid.setForeground(new java.awt.Color(255, 255, 255));
         txtstaffid.setBorder(null);
-        jPanel1.add(txtstaffid, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 272, -1));
+        txtstaffid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtstaffidActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtstaffid, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 272, -1));
 
         txtvehicleplatenumber.setBackground(new java.awt.Color(51, 153, 255));
         txtvehicleplatenumber.setForeground(new java.awt.Color(255, 255, 255));
         txtvehicleplatenumber.setBorder(null);
-        jPanel1.add(txtvehicleplatenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 272, -1));
+        jPanel1.add(txtvehicleplatenumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 272, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Order Status");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, -1));
 
         cbxorderstatus.setBackground(new java.awt.Color(51, 153, 255));
         cbxorderstatus.setForeground(new java.awt.Color(255, 255, 255));
         cbxorderstatus.setBorder(null);
-        jPanel1.add(cbxorderstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 110, -1, -1));
+        jPanel1.add(cbxorderstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Start Date");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
         txtstartdate.setBackground(new java.awt.Color(51, 153, 255));
         txtstartdate.setForeground(new java.awt.Color(255, 255, 255));
         txtstartdate.setBorder(null);
-        jPanel1.add(txtstartdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 272, -1));
+        jPanel1.add(txtstartdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 272, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("End Date");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, -1, -1));
 
         txtenddate.setBackground(new java.awt.Color(51, 153, 255));
         txtenddate.setForeground(new java.awt.Color(255, 255, 255));
         txtenddate.setBorder(null);
-        jPanel1.add(txtenddate, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 271, -1));
+        jPanel1.add(txtenddate, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 271, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Vehicle Plate Number");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         btncancel.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btncancel.setForeground(new java.awt.Color(51, 153, 255));
@@ -248,24 +253,24 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, -1));
 
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("_________________________________________________________");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, -1, -1));
+        jLabel8.setText("____________________________________________________");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, -1, -1));
 
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("_________________________________________________________");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, -1, -1));
+        jLabel9.setText("____________________________________________________");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, -1, -1));
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("_________________________________________________________");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        jLabel10.setText("____________________________________________________");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("_________________________________________________________");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
+        jLabel11.setText("____________________________________________________");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("_________________________________________________________");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
+        jLabel12.setText("____________________________________________________");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 610));
 
@@ -328,6 +333,10 @@ public class PlaceOrder extends javax.swing.JFrame implements ActionListener {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_closeButton2MouseClicked
+
+    private void txtstaffidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtstaffidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtstaffidActionPerformed
     public void setModel(Order o){
         txtcustomerid.setText(o.getCustomerId());
         txtstaffid.setText(o.getStaffId());
